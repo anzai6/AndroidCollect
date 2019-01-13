@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <com.android.collect.widget.circleprogress.CircleProgress
+        android:id="@+id/circleProgress"
+        android:layout_width="@dimen/space_240"
+        android:layout_height="@dimen/space_240"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_24"
+        android:layout_marginTop="@dimen/space_24"
+        app:antiAlias="true"
+        app:arcWidth="@dimen/space_12"
+        app:bgArcColor="@color/circle_progress_default_bg"
+        app:bgArcWidth="@dimen/space_12"
+        app:hint="当前进度如下："
+        app:hintColor="@color/text_gray"
+        app:hintSize="@dimen/tv16"
+        app:maxValue="100"
+        app:startAngle="270"
+        app:sweepAngle="360"
+        app:unit=""
+        app:unitSize="@dimen/tv12"
+        app:value="0"
+        app:valueColor="@color/text_black"
+        app:valueSize="@dimen/tv34"/>
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/appCompatSeekBar"
+        style="@style/base_mw"
+        android:max="100"
+        android:progress="0"
+        android:text="内容"/>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.collect">
+
+    <application
+        android:name=".library.common.CsiiApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.splash.MySplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.activity.MyMainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.main.activity.LearnListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 键盘 -->
+        <activity
+            android:name=".ui.other.keyboard.KeyBoardTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 点赞 -->
+        <activity
+            android:name=".ui.view.other_view.praise.PraiseListViewTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 六格密码输入框 -->
+        <activity
+            android:name=".ui.view.other_view.activity.SixGridPswTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 圆形进度框 -->
+        <activity
+            android:name=".ui.view.other_view.activity.CircleProgressTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 自动补全输入框 -->
+        <activity
+            android:name=".ui.view.other_view.activity.AutoCompleteTvTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 悬浮的拖动控件 -->
+        <activity
+            android:name=".ui.view.other_view.activity.DragViewTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!-- 右侧索引导航栏 -->
+        <activity
+            android:name=".ui.view.other_view.activity.IndexBarTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent"/>
+    </application>
+
+</manifest>

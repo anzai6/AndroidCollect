@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_ll_mw_h"
+              android:background="@color/white"
+              android:baselineAligned="false"
+              android:elevation="@dimen/space_4" >
+
+    <LinearLayout
+        android:id="@+id/ll_homepage"
+        style="@style/homepage_bottom_menu">
+
+        <ImageView
+            style="@style/homepage_bottom_iv"
+            android:src="@drawable/selector_main_homepage_iv"/>
+
+        <TextView
+            style="@style/homepage_bottom_tv"
+            android:text="@string/main_homepage"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loan_product"
+        style="@style/homepage_bottom_menu">
+
+        <ImageView
+            style="@style/homepage_bottom_iv"
+            android:src="@drawable/selector_main_loan_iv"/>
+
+        <TextView
+            style="@style/homepage_bottom_tv"
+            android:text="@string/main_loan_product"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_myself"
+        style="@style/homepage_bottom_menu">
+
+        <ImageView
+            style="@style/homepage_bottom_iv"
+            android:src="@drawable/selector_main_my_iv"/>
+
+        <TextView
+            style="@style/homepage_bottom_tv"
+            android:text="@string/main_my"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.android.support:appcompat-v7:27.0.0'
+    api 'com.android.support:recyclerview-v7:27.0.0'
+    api 'com.android.support:design:27.0.0'
+    // rxjava
+    api 'io.reactivex.rxjava2:rxjava:2.1.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // glide
+    api 'com.github.bumptech.glide:glide:3.8.0'
+    api 'com.android.support:support-v4:25.3.1'
+    // 查看长图和点击缩放图片 https://github.com/davemorrissey/subsampling-scale-image-view
+    api 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+    // gson
+    api 'com.google.code.gson:gson:2.8.1'
+    // okhttp3
+    api 'com.squareup.okhttp3:okhttp:3.8.1'
+    // retrofit2
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    // https://github.com/rengwuxian/MaterialEditText
+    api 'com.rengwuxian.materialedittext:library:2.1.4'
+    // 跑马灯 https://github.com/sfsheng0322/MarqueeView
+    api 'com.sunfusheng:marqueeview:1.2.0'
+    // https://github.com/laobie/StatusBarUtil
+    api 'com.jaeger.statusbarutil:library:1.4.0'
+    // 索引列表 https://github.com/mcxtzhang/SuspensionIndexBar
+    api 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    // 加载GIF https://github.com/koral--/android-gif-drawable
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+    // 刷新加载 https://github.com/scwang90/SmartRefreshLayout
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    // 折线图 https://github.com/PhilJay/MPAndroidChart
+    api 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    // MaterialEdittext
+    api 'com.rengwuxian.materialedittext:library:2.1.4'
+    // 底部导航栏 https://github.com/roughike/BottomBar
+    api 'com.roughike:bottom-bar:2.3.1'
+    // TabLayout切换 https://github.com/H07000223/FlycoTabLayout
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    // 滑动返回  https://github.com/bingoogolapple/BGASwipeBackLayout-Android
+    api 'cn.bingoogolapple:bga-swipebacklayout:1.1.1'
+    // 提升H5首屏加载速度  https://github.com/Tencent/VasSonic
+    api 'com.tencent.sonic:sdk:1.1.1'
+
+    androidTestImplementation 'junit:junit:4.12'
+}

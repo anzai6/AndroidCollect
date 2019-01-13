@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/base_mm" >
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        style="@style/base_mm"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        style="@style/base_ll_ww_v"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            style="@style/base_40"
+            android:src="@drawable/ic_app_loading"/>
+
+        <TextView
+            android:id="@+id/tv_loading"
+            style="@style/base_ww"
+            android:layout_marginTop="@dimen/space_8"
+            android:paddingBottom="@dimen/space_100"
+            android:text="@string/update_checking"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_skip"
+        style="@style/base_ll_ww_h"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_28"
+        android:background="@drawable/shape_btn_splash_skip"
+        android:gravity="center">
+
+        <TextView
+            style="@style/base_ww"
+            android:text="@string/sip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv12"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/base_ww"
+            android:layout_marginLeft="@dimen/space_4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv12"/>
+    </LinearLayout>
+
+</RelativeLayout>

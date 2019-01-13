@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="praise_item_default">#548FBF</color>
+    <color name="praise_item_selector_default">#CCD9D9D9</color>
+
+    <color name="circle_progress_default_bg">#dbe2e4</color>
+    <color name="circle_progress_bg">#3eadba</color>
+
+    <color name="partTranslucent">#39000000</color>
+</resources>

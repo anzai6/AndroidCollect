@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             style="@style/rl_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <com.android.collect.widget.DragView
+        android:id="@+id/dragView"
+        style="@style/base_mm"
+        android:elevation="@dimen/space_4"
+        android:layout_marginTop="@dimen/space_48"/>
+
+</FrameLayout>

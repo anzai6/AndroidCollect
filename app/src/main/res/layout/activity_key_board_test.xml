@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <TextView
+        style="@style/base_tv_black"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8"
+        android:text="@string/key_board_change_listener"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/materialEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:hint="请输入用内容"
+        android:inputType="number"
+        android:textSize="@dimen/tv16"
+        app:met_baseColor="@color/gray"
+        app:met_errorColor="@color/red"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="键盘测试"
+        app:met_floatingLabelTextSize="@dimen/tv14"
+        app:met_maxCharacters="11"
+        app:met_primaryColor="@color/text_blue"
+        app:met_textColor="@color/text_black"
+        app:met_textColorHint="@color/text_edt_hint"
+        app:met_underlineColor="@color/edt_line_color"
+        />
+
+</LinearLayout>

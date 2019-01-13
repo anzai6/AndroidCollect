@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ll_main">
+
+    <com.android.collect.library.widget.LazyViewPager
+        android:id="@+id/vp_main"
+        style="@style/base_m0"
+        android:layout_gravity="center"
+        android:elevation="@dimen/space_4"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"/>
+
+    <include layout="@layout/include_main_bottom"/>
+
+</LinearLayout>

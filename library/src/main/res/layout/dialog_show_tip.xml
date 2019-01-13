@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_root"
+              style="@style/base_ll_ww_v"
+              android:background="@drawable/shape_dialog_common_bg"
+              android:gravity="center"
+              android:padding="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/base_ww"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="@dimen/space_8"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/tv18"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_content"
+        style="@style/base_ww"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_16"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/tv16"/>
+
+    <LinearLayout
+        android:id="@+id/ll_countdown"
+        style="@style/base_ll_ww_h"
+        android:padding="@dimen/space_8"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_countdownNumber"
+            style="@style/base_ww"
+            android:text="5"
+            android:textColor="@color/text_blue"
+            />
+
+        <TextView
+            android:id="@+id/tv_countdownText"
+            style="@style/base_ww"
+            android:layout_marginLeft="10dp"
+            android:text="秒后继续"
+            />
+    </LinearLayout>
+
+</LinearLayout>

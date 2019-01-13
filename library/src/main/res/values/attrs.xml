@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 样式属性 -->
+    <attr name="title_bg" format="color"/>
+    <attr name="btn_bg" format="color"/>
+    <attr name="all_item_bg" format="color"/>
+    <attr name="text_color_default" format="color"/>
+    <attr name="text_color_hint" format="color"/>
+    <attr name="btn_text_color" format="color"/>
+    <attr name="btn_text_color_disable" format="color"/>
+
+</resources>

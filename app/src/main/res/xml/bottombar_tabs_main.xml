@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_bottombar_home"
+        title="Home"/>
+    <tab
+        id="@+id/tab_view"
+        icon="@drawable/ic_bottombar_view"
+        title="View"/>
+    <tab
+        id="@+id/tab_frame"
+        icon="@drawable/ic_bottombar_frame"
+        title="Frame"/>
+    <tab
+        id="@+id/tab_other"
+        icon="@drawable/ic_bottombar_other"
+        title="Other"/>
+</tabs>

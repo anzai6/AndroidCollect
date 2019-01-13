@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:psd="http://schemas.android.com/apk/res-auto"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginTop="@dimen/space_24"
+        android:background="@color/white">
+
+        <com.android.collect.widget.SixGridPswEditText
+            android:id="@+id/edt_password"
+            style="@style/base_edt_item"
+            android:digits="0123456789"
+            android:inputType="number"
+            psd:focusedColor="@color/text_blue"
+            psd:maxCount="6"
+            psd:psdType="weChat"
+            psd:rectAngle="0dp"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_show"
+        style="@style/btn_main_blue"
+        android:text="内容"/>
+
+</LinearLayout>

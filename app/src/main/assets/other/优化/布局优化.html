@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>布局优化技巧</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>布局优化</h2>
+<ul>
+<li>
+<p><strong>在不影响层级深度的情况下</strong>，优先使用FrameLayout（内存消耗最小），其次使用LinearLayout（就算有weight属性）而不是RelativeLayout。因为RelativeLayout会让子View调用2次onMeasure，LinearLayout 在有weight时，才会让子View调用2次onMeasure。Measure的耗时越长那么绘制效率就低。复杂布局则尽量使用RelativeLayout避免相互嵌套（布局嵌套最耗费资源）</p>
+</li>
+<li>
+<p>如果非要是嵌套，那么尽量避免RelativeLayout嵌套RelativeLayout。这简直就是恶性循环，丧心病狂。</p>
+</li>
+<li>
+<p>多使用<strong>include</strong>复用布局</p>
+</li>
+<li>
+<p>多使用TextView的行间距以及Spannable或Html.fromHtml来代替多个TextView</p>
+</li>
+<li>
+<p>如果需要占位但是不改变背景颜色,用<strong>Space</strong>取代View可以节约绘制时间。例如：<br />
+如果要给两个条目中间添加间距，怎么实现呢？当然也很简单，比如添加一个高10dp的View，或者使用android:layout_marginTop=&quot;10dp&quot;等方法。但是增加View违背了我们的初衷，并且影响性能。使用过多的margin其实会影响代码的可读性。</p>
+</li>
+</ul>
+<p>这时你就可以使用Space，他是一个轻量级的。</p>
+<h4>&lt; merge/&gt;</h4>
+<p><merge/>标签在UI的结构优化中起着非常重要的作用，它可以删减多余的层级，优化UI。<merge/>多用于替换FrameLayout或者当一个布局包含另一个时，<merge/>标签消除视图层次结构中多余的视图组。</p>
+<ul>
+<li>
+<p>例如你的主布局文件是垂直布局，引入了一个垂直布局的include，这是如果include布局使用的LinearLayout就没意义了，使用的话反而减慢你的UI表现。这时可以使用<merge/>标签优化。</p>
+</li>
+<li>
+<p>&lt; merge/&gt;还用来去除不必要的FrameLayout。它的使用最理想的情况就是你的根布局是FrameLayout，同时没有使用background等属性。这时可以直接替换。因为我们布局外层就是FrameLayout，直接“合并”。</p>
+</li>
+</ul>
+<p>需要注意：</p>
+<blockquote>
+<p>1.merge必须放在布局文件的根节点上。<br />
+2.merge并不是一个ViewGroup，也不是一个View，它相当于声明了一些视图，等待被添加。<br />
+3.merge标签被添加到A容器下，那么merge下的所有视图将被添加到A容器下。<br />
+4.因为merge标签并不是View，所以在通过LayoutInflate.inflate方法渲染的时候， 第二个参数必须指定一个父容器，且第三个参数必须为true，也就是必须为merge下的视图指定一个父亲节点。<br />
+5.如果Activity的布局文件根节点是FrameLayout，可以替换为merge标签，这样，执行setContentView之后，会减少一层FrameLayout节点。<br />
+6.自定义View如果继承LinearLayout，建议让自定义View的布局文件根节点设置成merge，这样能少一层结点。<br />
+7.因为merge不是View，所以对merge标签设置的所有属性都是无效的。</p>
+</blockquote>
+<h4>&lt; ViewStub/&gt;</h4>
+<p>标签最大的优点是当你需要时才会加载，使用他并不会影响UI初始化时的性能。各种不常用的布局想进度条、显示错误消息等可以使用<ViewStub />标签，以减少内存使用量，加快渲染速度。<ViewStub />是一个不可见的，大小为0的View。<ViewStub />标签使用如下：</p>
+<pre><code>&lt;ViewStub  
+    android:id=&quot;@+id/stub_import&quot;  
+    android:inflatedId=&quot;@+id/panel_import&quot;  
+    android:layout=&quot;@layout/progress_overlay&quot;  
+    android:layout_width=&quot;fill_parent&quot;  
+    android:layout_height=&quot;wrap_content&quot;  
+    android:layout_gravity=&quot;bottom&quot; /&gt;  
+</code></pre>
+
+<p>当你想加载布局时，可以使用下面其中一种方法：</p>
+<pre><code>((ViewStub) findViewById(R.id.stub_import)).setVisibility(View.VISIBLE);  
+// or  
+View importPanel = ((ViewStub) findViewById(R.id.stub_import)).inflate();  
+</code></pre>
+
+<p>当调用inflate()函数的时候，ViewStub被引用的资源替代，并且返回引用的view。 这样程序可以直接得到引用的view而不用再次调用函数findViewById()来查找了。</p>
+<p>注：</p>
+<blockquote>
+<ol>
+<li>ViewStub是一个继承了View类的视图。</li>
+<li>ViewStub是不可见的，实际上是把宽高都设置为0</li>
+<li>可以通过布局文件的android:inflatedId或者调用ViewStub的setInflatedId方法为懒加载视图的跟节点设置ID</li>
+<li>ViewStub视图在首次调用setVisibility或者inflate方法之前，一直存在于视图树中</li>
+<li>只需要调用ViewStub的setVisibility或者inflate方法即可显示懒加载的视图</li>
+<li>调用setVisibility或者inflate方法之后，懒加载的视图会把ViewStub从父节点中替换掉</li>
+<li>ViewStub的inflate只能被调用一次，第二次调用会抛出异常，setVisibility可以被调用多次，但不建议这么做（后面说原因）</li>
+<li>为ViewStub赋值的android:layout_属性会替换待加载布局文件的根节点对应的属性</li>
+<li>inflate方法会返回待加载视图的根节点     
+</li>
+<li>ViewStub目前有个缺陷就是还不支持 &lt;merge//&gt;标签。</li>
+</ol>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

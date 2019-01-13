@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_item"
+              style="@style/base_ll_mw_v"
+              android:background="@drawable/selector_common_item_press_bg"
+              android:padding="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/base_tv_black"
+        android:text="标题"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/base_tv_blue"
+        android:layout_marginTop="@dimen/space_8"
+        android:singleLine="true"
+        android:text="内容"/>
+
+</LinearLayout>
+

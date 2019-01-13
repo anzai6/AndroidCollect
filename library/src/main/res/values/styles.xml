@@ -1,0 +1,433 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="btn_bg">@drawable/selector_btn_main_blue</item>
+        <item name="title_bg">@color/colorPrimary</item>
+        <item name="all_item_bg">@color/white</item>
+        <item name="text_color_default">@color/text_black</item>
+        <item name="text_color_hint">@color/text_hint</item>
+        <item name="btn_text_color">@color/text_white</item>
+        <item name="btn_text_color_disable">@color/text_gray</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 适用于开启滑动返回功能的 Activity -->
+    <style name="AppTheme.Transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="base_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮上 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 标题 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 是否环绕半透明背景 -->
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="dialog_scroll_select" parent="base_dialog_style">
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 加载对话框 -->
+    <style name="dialog_loading" parent="base_dialog_style">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ScrollSelectDialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_scroll_select_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_dialog_scroll_select_out</item>
+    </style>
+
+    <style name="dialog_ll" parent="base_ll_mw_v">
+        <item name="android:background">@drawable/shape_dialog_common_bg</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">true</item>
+    </style>
+
+    <style name="base_ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="base_mm">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="base_mw">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="base_wm">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="base_ll_ww_v" parent="base_ww">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_ww_h" parent="base_ww">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_mm_v" parent="base_mm">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_mm_h" parent="base_mm">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_mw_v" parent="base_mw">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_mw_h" parent="base_mw">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_wm_v" parent="base_wm">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_wm_h" parent="base_wm">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_0w">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="base_0m">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="base_w0">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="base_m0">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="base_ll_0w_v" parent="base_0w">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_0w_h" parent="base_0w">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_0m_v" parent="base_0m">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_0m_h" parent="base_0m">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_w0_v" parent="base_w0">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_w0_h" parent="base_w0">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_ll_m0_v" parent="base_m0">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="base_ll_m0_h" parent="base_m0">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="base_12">
+        <item name="android:layout_width">@dimen/space_12</item>
+        <item name="android:layout_height">@dimen/space_12</item>
+    </style>
+
+    <style name="base_16">
+        <item name="android:layout_width">@dimen/space_16</item>
+        <item name="android:layout_height">@dimen/space_16</item>
+    </style>
+
+    <style name="base_20">
+        <item name="android:layout_width">@dimen/space_20</item>
+        <item name="android:layout_height">@dimen/space_20</item>
+    </style>
+
+    <style name="base_24">
+        <item name="android:layout_width">@dimen/space_24</item>
+        <item name="android:layout_height">@dimen/space_24</item>
+    </style>
+
+    <style name="base_28">
+        <item name="android:layout_width">@dimen/space_28</item>
+        <item name="android:layout_height">@dimen/space_28</item>
+    </style>
+
+    <style name="base_32">
+        <item name="android:layout_width">@dimen/space_32</item>
+        <item name="android:layout_height">@dimen/space_32</item>
+    </style>
+
+    <style name="base_40">
+        <item name="android:layout_width">@dimen/space_40</item>
+        <item name="android:layout_height">@dimen/space_40</item>
+    </style>
+
+    <style name="base_tv" parent="base_ww">
+        <item name="android:textSize">@dimen/tv16</item>
+    </style>
+
+    <style name="base_tv_black" parent="base_tv">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="base_tv_white" parent="base_tv">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="base_tv_gray" parent="base_tv">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="base_tv_light_gray" parent="base_tv">
+        <item name="android:textColor">@color/text_light_gray</item>
+    </style>
+
+    <style name="base_tv_blue" parent="base_tv">
+        <item name="android:textColor">@color/text_blue</item>
+    </style>
+
+    <style name="base_tv_hint" parent="base_tv">
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <style name="base_ll_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_48</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="base_edt_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_48</item>
+        <item name="android:textSize">@dimen/tv16</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColorHint">@color/text_edt_hint</item>
+    </style>
+
+    <style name="base_refreshLayout" parent="base_mm">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--<style name="base_refreshLayout" parent="base_mm">
+        <item name="android:background">@color/transparent</item>
+        <item name="com.android.collect.library:srlDragRate">0.5</item>
+        <item name="com.android.collect.library:srlEnableOverScrollBounce">true</item>
+        <item name="com.android.collect.library:srlEnablePureScrollMode">true</item>
+        <item name="com.android.collect.library:srlFooterHeight">0dp</item>
+        <item name="com.android.collect.library:srlHeaderHeight">0dp</item>
+        <item name="com.android.collect.library:srlReboundDuration">1400</item>
+    </style>-->
+
+    <!--<style name="refresh_and_load_layout" parent="base_mm">
+        <item name="android:background">@color/transparent</item>
+        <item name="com.android.collect.library:srlDragRate">0.7</item>
+        <item name="com.android.collect.library:srlEnableAutoLoadmore">false</item>
+        <item name="com.android.collect.library:srlEnableLoadmore">true</item>
+        <item name="com.android.collect.library:srlFooterHeight">@dimen/space_64</item>
+        <item name="com.android.collect.library:srlHeaderHeight">@dimen/space_64</item>
+        <item name="com.android.collect.library:srlFooterMaxDragRate">1.3</item>
+        <item name="com.android.collect.library:srlHeaderMaxDragRate">1.3</item>
+    </style>-->
+
+    <style name="base_scrollview" parent="base_mm">
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="base_recyclerview" parent="scrollview_main">
+    </style>
+
+    <style name="scrollview_main" parent="base_scrollview">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="ll_main" parent="base_ll_mm_v">
+        <item name="android:background">@color/bg_all</item>
+        <!-- 以下两个属性是防止一进页面EditText就获取焦点弹出键盘 -->
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="rl_main" parent="base_mm">
+        <item name="android:background">@color/bg_all</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- 大蓝按钮 -->
+    <style name="btn_main_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_40</item>
+        <item name="android:layout_marginTop">@dimen/space_24</item>
+        <item name="android:layout_marginLeft">@dimen/space_16</item>
+        <item name="android:layout_marginRight">@dimen/space_16</item>
+        <item name="android:background">?btn_bg</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/tv16</item>
+        <item name="android:elevation">@dimen/space_2</item>
+    </style>
+
+    <style name="fl_head" parent="base_wm">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:paddingLeft">@dimen/space_4</item>
+        <item name="android:paddingRight">@dimen/space_12</item>
+    </style>
+
+    <!-- 验证码的button -->
+    <style name="btn_verify_code" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/space_32</item>
+        <item name="android:paddingBottom">@dimen/space_4</item>
+        <item name="android:paddingTop">@dimen/space_4</item>
+        <item name="android:textColor">@color/selector_btn_sms_tv_color</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:text">@string/get_msg</item>
+    </style>
+
+    <style name="ll_common_item" parent="base_ll_item">
+        <item name="android:paddingLeft">@dimen/space_8</item>
+        <item name="android:paddingRight">@dimen/space_8</item>
+    </style>
+
+    <style name="tv_item_left" parent="base_0m">
+        <item name="android:textSize">@dimen/tv16</item>
+        <item name="android:textColor">?text_color_default</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="tv_item_right" parent="tv_item_left">
+        <item name="android:layout_weight">1.5</item>
+    </style>
+
+    <style name="edt_item_right">
+        <item name="android:layout_weight">1.5</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/tv16</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">?text_color_default</item>
+        <item name="android:textColorHint">?text_color_hint</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="edt_password">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.5</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:textSize">@dimen/tv16</item>
+    </style>
+
+    <style name="edt_common" parent="base_edt_item">
+        <item name="android:paddingLeft">@dimen/space_8</item>
+        <item name="android:paddingRight">@dimen/space_8</item>
+    </style>
+
+    <style name="line_v_big">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_light_gray</item>
+    </style>
+
+    <style name="line_v_mall">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_light_gray</item>
+    </style>
+
+    <style name="line_h_big">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_light_gray</item>
+    </style>
+
+    <style name="line_h_small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/line_light_gray</item>
+    </style>
+
+    <!-- 首页tab样式 -->
+    <style name="homepage_bottom_menu">
+        <item name="android:layout_width">0.3dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- 首页底部图片 -->
+    <style name="homepage_bottom_iv">
+        <item name="android:layout_width">@dimen/space_28</item>
+        <item name="android:layout_height">@dimen/space_28</item>
+        <item name="android:layout_marginTop">@dimen/space_4</item>
+    </style>
+
+    <!-- 首页tab样式 -->
+    <style name="homepage_bottom_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/space_2</item>
+        <item name="android:layout_marginTop">@dimen/space_2</item>
+        <item name="android:textColor">@color/selector_main_bottom_tv_color</item>
+        <item name="android:textSize">@dimen/tv12</item>
+    </style>
+
+    <!--自定义switch的按钮和轨迹颜色theme-->
+    <style name="mySwitch" parent="Theme.AppCompat.Light">
+        <!-- switch 打开时的按钮的颜色 轨迹颜色默认为30%（看效果就明白30%是怎么回事了）这个颜色 -->
+        <item name="colorControlActivated">@color/switch_open_blue</item>
+        <!--  switch关闭时的按钮的颜色 -->
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <!-- switch关闭时的轨迹的颜色 30%这个颜色 -->
+        <item name="android:colorForeground">@color/gray</item>
+    </style>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_common_item" >
+
+    <TextView
+        style="@style/tv_item_left"
+        android:text="@string/msg_code" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_captcha"
+            style="@style/edt_item_right"
+            android:hint="@string/msg_code_input_hint"
+            android:inputType="number"
+            android:maxLength="6" />
+
+        <com.android.collect.library.widget.SMSAuthCode
+            android:id="@+id/btn_captcha"
+            style="@style/btn_verify_code"
+            android:layout_marginBottom="@dimen/space_4"
+            android:layout_marginTop="@dimen/space_4" />
+    </LinearLayout>
+
+</LinearLayout>

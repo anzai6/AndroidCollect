@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_ll_mm_v"
+              android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_blue"/>
+
+    <LinearLayout
+        style="@style/base_ll_mw_h">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/btn_main_blue"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_40"
+            android:text="@string/cancel"/>
+
+        <view
+            style="@style/base_0m"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/btn_main_blue"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_40"
+            android:text="@string/sure"
+            android:textColor="@color/text_blue"/>
+    </LinearLayout>
+
+    <View style="@style/line_h_small"/>
+
+    <com.csii.zbdirect.widget.WheelView
+        android:id="@+id/wheel_view_wv"
+        style="@style/base_mw"/>
+
+</LinearLayout>

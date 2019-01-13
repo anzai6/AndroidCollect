@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <LinearLayout
+        android:id="@+id/ll_praiseListView"
+        style="@style/base_ll_mw_v"
+        android:layout_marginTop="@dimen/space_8"
+        android:background="@drawable/selector_common_item_press_bg">
+
+        <com.android.collect.widget.praise.PraiseListView
+            android:id="@+id/praiseListView"
+            style="@style/base_ww"
+            android:layout_margin="@dimen/space_8"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/tv16"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt1"
+        style="@style/edt_common"
+        android:layout_marginTop="@dimen/space_8"
+        android:hint="请输入点赞姓名"/>
+
+    <View style="@style/line_h_small"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/btn_main_blue"
+        android:text="点赞"/>
+
+    <View style="@style/line_h_small"/>
+
+    <EditText
+        android:id="@+id/edt2"
+        style="@style/edt_common"
+        android:layout_marginTop="@dimen/space_16"
+        android:hint="请输入需要去掉点赞的数字位数"/>
+
+    <Button
+        android:id="@+id/btn_remove"
+        style="@style/btn_main_blue"
+        android:text="去掉点赞"/>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/colorPrimaryDark"><!-- 这里是扩散水波纹的色值 -->
+
+    <item>
+        <selector>
+            <!--可用效果-->
+            <item
+                android:drawable="@drawable/shape_btn_main_blue_nor"
+                android:state_enabled="true"/>
+            <!--未选中时效果-->
+            <item
+                android:drawable="@drawable/shape_btn_gray"
+                android:state_enabled="false"/>
+
+        </selector>
+
+    </item>
+
+</ripple>

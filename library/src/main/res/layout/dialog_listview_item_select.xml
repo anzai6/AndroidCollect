@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/dialog_ll">
+
+    <ListView
+        android:id="@+id/listview"
+        style="@style/base_mw"
+        android:background="@color/white"
+        android:divider="@color/bg_all"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/common_item_press_color"></ListView>
+
+</LinearLayout>

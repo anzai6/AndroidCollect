@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        style="@style/base_recyclerview"/>
+
+</LinearLayout>

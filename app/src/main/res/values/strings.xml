@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">森罗万象</string>
+
+    <string name="view_title">View</string>
+    <string name="other_title">Other</string>
+    <string name="frame_title">Frame</string>
+    <string name="home_title">Home</string>
+    <string name="title_activity_nav_home">NavHomeActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="personal_info">个人信息</string>
+    <string name="setting">设置</string>
+    <string name="about_us">关于我们</string>
+    <string name="share">分享</string>
+    <string name="exit_app">退出应用</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- View -->
+    <string name="praise_title">点赞</string>
+    <string name="psw_edt_title">密码框</string>
+    <string name="drag_view_title">可拖动</string>
+    <string name="circle_progress_title">圆形进度条</string>
+    <string name="auto_complete_title">自动补全</string>
+    <string name="index_bar_title">右侧索引导航栏</string>
+
+</resources>

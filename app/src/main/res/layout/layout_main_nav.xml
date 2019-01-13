@@ -1,0 +1,114 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_nav"
+    style="@style/base_ll_mm_v">
+
+    <FrameLayout
+        android:id="@+id/nav_head_layout"
+        style="@style/base_mw"
+        android:layout_marginBottom="@dimen/space_8">
+
+        <ImageView
+            style="@style/base_mw"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_nav_head_bg"/>
+
+        <LinearLayout
+            style="@style/base_ll_mw_v"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginLeft="@dimen/space_16">
+
+            <com.android.collect.library.widget.CircleImageView
+                android:layout_width="@dimen/space_56"
+                android:layout_height="@dimen/space_56"
+                android:src="@drawable/ic_default_avatar"/>
+
+            <TextView
+                android:layout_width="@dimen/space_60"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:gravity="center_horizontal"
+                android:text="小明"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv16"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navPersonalInfo"
+        style="@style/ll_nav_item">
+
+        <ImageView
+            style="@style/iv_nav_item"
+            android:src="@drawable/ic_personal_info"/>
+
+        <TextView
+            style="@style/tv_nav_item"
+            android:text="@string/personal_info"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navSetting"
+        style="@style/ll_nav_item">
+
+        <ImageView
+            style="@style/iv_nav_item"
+            android:src="@drawable/ic_setting"/>
+
+        <TextView
+            style="@style/tv_nav_item"
+            android:text="@string/setting"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navAboutUs"
+        style="@style/ll_nav_item">
+
+        <ImageView
+            style="@style/iv_nav_item"
+            android:src="@drawable/ic_about_us"/>
+
+        <TextView
+            style="@style/tv_nav_item"
+            android:text="@string/about_us"/>
+
+    </LinearLayout>
+
+
+    <View style="@style/line_h_small"/>
+
+    <LinearLayout
+        android:id="@+id/ll_navShare"
+        style="@style/ll_nav_item">
+
+        <ImageView
+            style="@style/iv_nav_item"
+            android:src="@drawable/ic_share"/>
+
+        <TextView
+            style="@style/tv_nav_item"
+            android:text="@string/share"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navExitApp"
+        style="@style/ll_nav_item">
+
+        <ImageView
+            style="@style/iv_nav_item"
+            android:src="@drawable/ic_exit_app"/>
+
+        <TextView
+            style="@style/tv_nav_item"
+            android:text="@string/exit_app"/>
+
+    </LinearLayout>
+</LinearLayout>

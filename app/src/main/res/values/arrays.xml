@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_home_title" >
+        <item>Activity</item>
+        <item>Fragment</item>
+        <item>Service</item>
+        <item>Receiver</item>
+        <item>Provider</item>
+    </array>
+</resources>

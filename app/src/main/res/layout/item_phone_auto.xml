@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/base_mw"
+                android:padding="@dimen/space_4">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/space_32"
+        android:layout_height="@dimen/space_32"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space_8"
+        android:src="@drawable/ic_personal_info"/>
+
+    <LinearLayout
+        style="@style/base_ll_mw_v"
+        android:layout_marginLeft="@dimen/space_8"
+        android:layout_toRightOf="@id/ivIcon">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/base_tv_blue"/>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/base_ww"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/tv14"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/base_ww"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/tv14"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="@dimen/space_72"
+        android:layout_height="@dimen/space_32"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_8"
+        android:background="@drawable/selector_btn_main_blue"
+        android:focusable="false"
+        android:text="拨号"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/tv16"/>
+
+    <View
+        style="@style/line_h_big"/>
+
+</RelativeLayout>

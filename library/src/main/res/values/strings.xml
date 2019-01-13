@@ -1,0 +1,50 @@
+<resources>
+    <!--<string name="app_name">安仔</string>-->
+
+    <string name="tip">提示</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="get_msg">获取验证码</string>
+    <string name="msg_code">验证码</string>
+    <string name="msg_code_input_hint">请输入短信验证码</string>
+    <string name="exit_app_tip">再按一次退出程序</string>
+    <string name="sip">跳过</string>
+    <string name="reset_msg">重新发送</string>
+    <string name="reset_msg_second_format">重新发送(%1$s秒)</string>
+    <string name="exit">退出</string>
+
+    <string name="error_no_data">没有数据了</string>
+    <string name="error_no_sd_card">内存卡不可用</string>
+
+    <string name="dialog_loading_msg">加载中&#8230;</string>
+
+    <!-- 通讯异常 -->
+    <string name="http_error_default">未知错误</string>
+    <string name="http_error_timeout">未登录</string>
+    <string name="http_connect_error">通讯异常，请稍后再试</string>
+    <string name="http_error_forceout">对不起，当前已经有一个相同的用户处于登录状态或用户状态异常，故您已被系统强制签退。</string>
+
+    <!-- 更新 -->
+    <string name="the_latest_version">最新版本</string>
+    <string name="version_size">版本大小</string>
+    <string name="update_content">更新内容为:</string>
+    <string name="update_now">现在更新</string>
+    <string name="update_later">稍后更新</string>
+    <string name="update_network_error">通讯异常，请稍候再试</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+    <string name="update_data_error">数据异常，请与银行联系。</string>
+    <string name="update_checking">检测更新中&#8230;</string>
+    <string name="update_app_is_new">客户端已经是最新版</string>
+    <string name="update_prepare_data">正在准备数据，请稍后&#8230;</string>
+
+    <!-- 首页 -->
+    <string name="main_homepage">首页</string>
+    <string name="main_loan_product">贷款产品</string>
+    <string name="main_my">我的</string>
+
+    <!-- 键盘 -->
+    <string name="key_board_title">键盘</string>
+    <string name="key_board_change_listener">键盘弹出和收起监听：</string>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/ll_main">
+
+    <include layout="@layout/include_main_head"/>
+
+    <FrameLayout style="@style/base_mm">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshlayout"
+            style="@style/base_refreshLayout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                style="@style/base_recyclerview"
+                android:background="@color/bg_all"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+            android:id="@+id/indexBar"
+            android:layout_width="@dimen/space_24"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            app:indexBarPressBackground="@color/partTranslucent"
+            app:indexBarTextSize="@dimen/tv16"/>
+
+        <TextView
+            android:id="@+id/tvSideBarHint"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_80"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_side_bar_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tv48"
+            android:visibility="gone"
+            tools:text="A"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
+</LinearLayout>

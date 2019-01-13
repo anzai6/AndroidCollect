@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/dialog_ll"
+              android:background="@drawable/shape_dialog_confirm_bg"
+    >
+
+    <TextView
+        android:id="@+id/tv_dialog_content"
+        style="@style/base_ww"
+        android:layout_marginBottom="@dimen/space_24"
+        android:layout_marginLeft="@dimen/space_40"
+        android:layout_marginRight="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_24"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/tv16"/>
+
+    <View style="@style/line_h_small"/>
+
+    <LinearLayout
+        style="@style/base_ll_mw_h">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/btn_main_blue"
+            android:text="@string/cancel"/>
+
+        <View style="@style/line_v_mall"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/btn_main_blue"
+            android:text="@string/sure"/>
+    </LinearLayout>
+
+</LinearLayout>
